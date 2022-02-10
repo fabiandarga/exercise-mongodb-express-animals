@@ -26,4 +26,26 @@ Es sollen alle Daten aus einem Document zurück gegeben werden.
 
 ## löschen
 `DELETE /animals/:id`  
-Ess soll genau ein Dokument gelöscht werden.
+Es soll genau ein Dokument gelöscht werden.
+
+## Animals suchen
+`GET /animals`  
+Füge die Möglichkeit hinzu nach Tieren zu suchen.  
+Dafür benutzen wir die URL Parameter:
+- name
+- age
+- kind
+
+z.B.:
+- ` GET /animals?name=Fluffy` <- Findet alle Tiere mit dem namen Fluffy
+- ` GET /animals?age=3` <- Findet alle Tiere mit dem alter 3
+- ` GET /animals?kind=Mouse` <- Findet alle Mäuse
+- ` GET /animals?kind=Mouse&age=10` <- Findet alle Mäuse mit dem alter 10
+
+Wie man Query-Parameter benutzt: [handle-get-request-query-string-parameters-in-express-js](https://coderrocketfuel.com/article/handle-get-request-query-string-parameters-in-express-js)
+
+
+### Bonus
+Die Suche nach dem Namen soll auch Teile des Strings  erkennen.  
+z.B.:
+` GET /animals?name=fl` -> Findet Fluffy und Flappy
