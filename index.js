@@ -7,7 +7,7 @@ const DB_URI = "mongodb://localhost:27017";
 const app = express();
 initClient(DB_URI);
 
-
+// Add Routes
 
 app.listen(PORT, () => {
     console.log('Server startet');

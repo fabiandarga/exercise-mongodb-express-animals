@@ -1,4 +1,4 @@
-import { MongoClient } from 'mongodb';
+import { MongoClient, ObjectId } from 'mongodb';
 
 let client;
 
@@ -22,7 +22,6 @@ export async function findAll() {
         
         // Dein Code !?
 
-        
         return result; // wichtig <- 
 
     } catch (e) {
